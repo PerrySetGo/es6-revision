@@ -57,3 +57,32 @@ let firstName="perry"
 let message = `Hi there, ${firstName}`;
 
 Third commit
+
+## Spread Operators
+
+Allows arrays to be "spread" into other arrays!
+
+let a = [7,8,9];
+let b = [6, ...a,10];
+console.log(b);
+
+-> [6, 7, 8, 9, 10]
+
+super interesting! It replaces the concat function for arrays in ES5.
+You can also use this to print out arrays:
+
+let z = [1,2,3];
+console.log(...z);
+-> 1 2 3
+
+## Destructuring assignments with Arrays
+ An easy way to break arrays into pieces without loops!
+
+ let blackWriters = ["Ta-Nehisi Coates", "Malcolm Gladwell", "Roxane Gay"];
+
+ let [tc, mg, rg] = blackWriters;
+ console.log(tc, mg, rg);
+
+## Destructuring assignments with Objects
+
+we can use destructuring assignment on objects to pull properties out of objects the same way we were able to do with Arrays! this is awesome!

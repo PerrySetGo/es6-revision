@@ -18,3 +18,10 @@ npm i webpack@4.12.0 webpack-cli@3.0.3 --save-dev
 * can configure basic setup by creating webpack.config.js in root directory
 * can create a simple dev server by installing webpack-dev-server as a dev dependency and adding that to start script command
 * can create a html page to show result as index.html in build/, loading bundle.js as script file
+* configure dev server with settings in webpack config
+* launch page on localhost:3000 and see log in console.
+
+First Commit
+
+* babel core allows for transpilation, babel loader allows us to import/export js files, babel preset allows to transpile dependent on browser.
+* the .babelrc file configures browser-specific transpilation

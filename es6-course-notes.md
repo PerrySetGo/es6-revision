@@ -124,8 +124,6 @@ console.log(points);
 
 find(), forEach(), reduce(), some(), keys(), values()...
 
-Fifth commit
-
 ## Exporting values
 
 * Modules are re-usable pieces of code within application
@@ -135,3 +133,14 @@ Fifth commit
 * ./ in same directory
 * can export multiple functions by using export {thing, thing2} at the bottom of the file: see notes on calculator
 * you omit the curlies when you are importing something that has been declared the default function!
+
+Fifth commit
+
+## JavaScript Classes
+
+* es6 we use classes (as opposed to prototypes?)
+* classes work very similar to Java
+* cannot overload constructors like in Java
+* can import/export
+* can call super() to invoke parent constructor
+* 

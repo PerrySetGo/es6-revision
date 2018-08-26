@@ -143,6 +143,25 @@
 
 //calculator
 //import {add, multiply}  from './calculator';
-import multiply from './calculator';
+// import multiply from './calculator';
+//
+// console.log(multiply(3,4));
 
-console.log(multiply(3,4));
+// let merry = new Entity("Merry", 4.6);
+// merry.greet();
+
+import Entity from './entity';
+
+class Hobbit extends Entity{
+  constructor(name, height){
+    super(name, height);
+  }
+
+  greet() {
+    console.log(`This is a hobbity greeting from ${this.name}`)
+  }
+}
+
+let newHobbit = new Hobbit("Frodo", 4.5);
+console.log(newHobbit.name, newHobbit.height);
+newHobbit.greet();

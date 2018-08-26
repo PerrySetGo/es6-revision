@@ -25,3 +25,35 @@ First Commit
 
 * babel core allows for transpilation, babel loader allows us to import/export js files, babel preset allows to transpile dependent on browser.
 * the .babelrc file configures browser-specific transpilation
+
+Second Commit - project setup completed.
+
+## Variable Declarations
+
+* In ES6 we move away from var and towards let as a regular variable declaration.
+* `let` is scoped to code block
+* cannot reference the variable outside of the block
+* must be enclosed in a minimum of `{}` - a standalone block.
+* const is a constant and can only be declared once
+* if const points to an array, the array can be manipulated, but the variable cannot be reassigned:
+
+const numbaz = [1,2,3];
+numbaz.push(4);
+console.log(numbaz);
+
+works
+
+const numbaz = [1,2,3];
+numbaz = 'numbers';
+
+will not work.
+
+
+## Template literals
+
+New template literal syntax replaces concatenation for strings!
+
+let firstName="perry"
+let message = `Hi there, ${firstName}`;
+
+Third commit

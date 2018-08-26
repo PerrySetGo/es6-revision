@@ -86,3 +86,52 @@ console.log(...z);
 ## Destructuring assignments with Objects
 
 we can use destructuring assignment on objects to pull properties out of objects the same way we were able to do with Arrays! this is awesome!
+
+Fourth commit
+
+## Arrow Functions
+
+* shorter syntax
+* anonymous functions, no named identifier
+* can create named identifier by writing anonymous function into a variable, such as a constant
+
+const liftOff = () => {
+  console.log('3..2..1..liftoff!');
+}
+
+liftOff();
+
+* Arrow functions do not bind their own this.
+* if you are using this inside an arrow function, it is actually referencing the this in global scope
+
+
+## Arrow Functions and Map methods
+
+* map function allows us to create arrays by calling function on each element in the array.
+* much shorter version than using a loop
+* can write very short array element manipulation syntax
+
+let points = [10,20,30];
+points = points.map(element => element + 1);
+console.log(points);
+
+## Filtering
+
+* Filter method creates a new array from an existing array
+* filters array, kind of like a pipe, dependent on the results of a certain test
+
+## Additional Helper Methods for arrays
+
+find(), forEach(), reduce(), some(), keys(), values()...
+
+Fifth commit
+
+## Exporting values
+
+* Modules are re-usable pieces of code within application
+* Allows us to break down files, spreading out data and code
+* export can send functions, objects, primitive values from file to file
+* the name of the thing in curlies in the importing file must match the variable name in the exporting file. filename can be different.
+* ./ in same directory
+* can export multiple functions by using export {thing, thing2} at the bottom of the file: see notes on calculator
+* you omit the curlies when you are importing something that has been declared the default function!

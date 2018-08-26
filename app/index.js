@@ -67,9 +67,82 @@
 // let { goldstar, rainbows } = queero;
 // console.log(goldstar, rainbows);
 
-let goldstar = false;
-let rainbows = 12;
+// let goldstar = false;
+// let rainbows = 12;
+//
+// let queero = {goldstar: true, rainbows:1234};
+// ({ goldstar, rainbows } = queero); //not 100% sure how this works.
+// console.log(goldstar, rainbows);
 
-let queero = {goldstar: true, rainbows:1234};
-({ goldstar, rainbows } = queero); //not 100% sure how this works.
-console.log(goldstar, rainbows);
+//** Arrow Functions
+
+//old way
+
+// function liftOff(){
+//   console.log('3..2..1..liftoff!');
+// }
+//
+// liftOff();
+
+//intermediate away
+
+// setTimeout(() => {
+//   console.log('3..2..1..liftoff!');
+// }, 1000);
+
+
+//arrow function with named identifier
+
+// const liftOff = () => {
+//   console.log('3..2..1..liftoff!');
+// }
+//
+// liftOff();
+
+
+//Arrow functions with array mapping
+
+//let points = [10,20,30];
+// let addOne = (element) => { //element is not magical, can be changed
+//   return element + 1
+// }
+//points = points.map(addOne); //map is a callback
+
+//shorter es6 version
+// let points = [10,20,30];
+// points = points.map(element => {
+//   return element + 1;
+// });
+//even shorter
+
+// let points = [10,20,30];
+// points = points.map(element => element + 1);
+// console.log(points);
+
+//Filtering
+
+// let isPassing = (grade) => {
+//   return grade >=70;
+// }
+//
+// let scores = [90,85,67,71,70,55,92];
+//
+// let passing = scores.filter(isPassing); //how is filter different than map?
+//
+// console.log(passing);
+
+
+//shorter ES6 syntax
+
+// let scores = [90,85,67,71,70,55,92];
+// let passing = scores.filter(e => e >= 70); //how is filter different than map?
+// console.log(passing);
+
+// import {awesomeBlackFemaleAthletes, reparationsAcres} from './athletes'; //the thing in curlies has to match the variable name in the file
+// console.log(awesomeBlackFemaleAthletes, reparationsAcres);
+
+//calculator
+//import {add, multiply}  from './calculator';
+import multiply from './calculator';
+
+console.log(multiply(3,4));

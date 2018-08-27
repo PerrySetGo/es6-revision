@@ -150,18 +150,59 @@
 // let merry = new Entity("Merry", 4.6);
 // merry.greet();
 
-import Entity from './entity';
+//classes
+// import Entity from './entity';
+//
+// class Hobbit extends Entity{
+//   constructor(name, height){
+//     super(name, height);
+//   }
+//
+//   greet() {
+//     console.log(`This is a hobbity greeting from ${this.name}`)
+//   }
+// }
+//
+// let newHobbit = new Hobbit("Frodo", 4.5);
+// console.log(newHobbit.name, newHobbit.height);
+// newHobbit.greet();
 
-class Hobbit extends Entity{
-  constructor(name, height){
-    super(name, height);
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
+const api_key = '0650042e12a469a50be39ec61041eba7';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      city: 'Portland',
+      description:''
+    }
   }
 
-  greet() {
-    console.log(`This is a hobbity greeting from ${this.name}`)
+  componentDidMount(){
+    this.grabWeather(this.state.city);
+  }
+
+  grabWeather(city){
+    fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${api_key}&q=${city}`)
+    .then(response => response.json())
+    .then(json =>
+      this.setState({description:json.weather[0].description})
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        Weather Report for {this.state.city}: {this.state.description}
+      </div>
+    )
   }
 }
+ReactDOM.render(
+  <App />, document.getElementById('root')
+);
 
-let newHobbit = new Hobbit("Frodo", 4.5);
-console.log(newHobbit.name, newHobbit.height);
-newHobbit.greet();
+//sixth commit

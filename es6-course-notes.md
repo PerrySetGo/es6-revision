@@ -143,4 +143,8 @@ Fifth commit
 * cannot overload constructors like in Java
 * can import/export
 * can call super() to invoke parent constructor
-* 
+
+## JSX
+
+* allows us to write display code
+* made changes to package.json and also babelrc
